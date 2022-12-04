@@ -1,0 +1,204 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage{marvosym} % For cool symbols.
+\usepackage{xifthen}
+\usepackage{graphicx}
+
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Fall 11 - Fall 12} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{ \textit{#1}}\hspace{1.5em} {#2} #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\normalsize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\newcommand{\oneline}[1]{%
+  \newdimen{\namewidth}%
+  \setlength{\namewidth}{\widthof{#1}}%
+  \ifthenelse{\lengthtest{\namewidth < \textwidth}}%
+  {#1}% do nothing if shorter than text width
+  {\resizebox{\textwidth}{!}{#1}}% scale down
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{Pritam Choudhury}\vspace{1.5em} % Your name
+
+\noindent\textbf{PERSONAL INFORMATION}\vspace{0.5em} % Personal information heading
+
+\NewEntry{Nationality}{Indian} 
+
+\NewEntry{Address}{Levine 514, 220 South 33rd St, \flushright{\hspace*{92pt} Philadelphia, PA 19104, USA}}
+
+\NewEntry{E-mail}{\href{mailto:pritam@seas.upenn.edu}{pritam@seas.upenn.edu}} {\hspace{15pt}\color{black}{\href{pritamchoudhury.github.io}{(Personal Webpage)}}}
+
+
+\vspace{1em} 
+
+\noindent\textbf{AREAS OF INTEREST}\vspace{1em} 
+
+\Description{Language-Based Security, Substructural Type Systems, Dependent Type Theory, Programming Language Design, Formalization and Verification.}\vspace{2em} % Goal text
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\textbf{EDUCATION}\vspace{1em}
+
+\NewEntry{Aug 16-May 23}{University of Pennsylvania, US}
+
+\Description{\MarginText{Doctor of Philosophy}\textit{Computer and Information Science}\newline Specialization: Programming Languages \vspace{1em}\newline 
+\textit{Research Projects}: 
+\begin{itemize}
+\item \textit{Language-Based Security and Substructural Type Systems}\\
+I have been working on language-based security and substructural type systems since early 2020. My aim is to better understand the theoretical foundations of these subjects. The first five works listed under Publications report my findings.
+\item \textit{Practical Dependently Typed Programming Languages}\\
+I have been working on the design of practical dependently typed programming languages since Spring 2018. The first six works listed under Publications report my findings.
+\end{itemize}
+}
+ 
+\vspace{1em}
+
+\NewEntry{Aug 16-May 18}{University of Pennsylvania, US}
+
+\Description{\MarginText{Master of Science in Engineering}\textit{Computer and Information Science}\newline
+GPA : 3.98/4.0  \vspace{1em}\newline
+\textit{Courses taken}: Advanced Topics in Programming Languages, Advanced Programming, Theory of Computation, Analysis of Algorithms, Computer Architecture, Non-classical logics, Finite model theory, Software foundations.} \vspace{1em}
+
+\NewEntry{Oct 14-Jun 15}{University of Cambridge, UK}
+
+\Description{\MarginText{Master of Philosophy}\textit{Advanced Computer Science}\newline Specialization: Theoretical Computer Science\vspace{1em}\newline 
+Passed with Distinction. Average marks: 83.53\% \vspace{1em}\newline
+\textit{Modules taken}: Category Theory and Logic, Advanced Functional Programming, Advanced Denotational Semantics, Algebraic Path Problems, Language and Concepts, Research Skills. \vspace{1em}\newline
+\textit{Master's Thesis}: Constructive Representation of Nominal Sets in Agda \newline
+In this project, I developed a considerable portion of the theory of \href{https://dl.acm.org/doi/10.5555/2512979}{nominal sets} in constructive logic and mechanized it in \href{https://wiki.portal.chalmers.se/agda/pmwiki.php}{Agda}.\newline 
+}
+\vspace{1em}
+
+%------------------------------------------------
+
+\NewEntry{2010-2014}{Indian Institute of Technology, Roorkee, India}
+
+\Description{\MarginText{Bachelor of Technology}\textit{Electrical Engineering} \vspace{1em}\newline GPA: 9.574 on a scale of 10, First Division with Distinction. \newline
+\textit{CIS relevant subjects studied:} Object-oriented programming, Cryptography, Discrete Mathematics, Digital Electronics, Microprocessors and Peripherals, Neural Networks, Data Structures, Digital Image Processing.
+\vspace{1em} \newline
+\textit{Major Project:} \href{https://drive.google.com/file/d/0Bx9UyZRM4BJoeFJtbUl5cy1pSGM/view?usp=sharing}{Cyber Security in Smart Grids} \newline
+In this project, I analyzed the different types of known attacks on power grids along with the relevant defenses by simulating them on real-time systems. \vspace{1em}\newline
+Judged the best project for 2014 in the Faculty of Electrical Engineering.\newline
+}
+
+
+%------------------------------------------------
+
+\vspace{0.5em} 
+
+
+%-----------------------------------------------------------------------------
+%  Publications
+%-----------------------------------------------------------------------------
+
+\noindent\textbf{PUBLICATIONS} \textbf{(Including Drafts)}
+
+\begin{enumerate}
+\item Pritam Choudhury. 2023. Dependency and Linearity Analyses in Pure Type Systems. PhD Dissertation. University of Pennsylvania, US. (\href{https://github.com/pritamChoudhury/PhDDissertationDraft/tree/master}{draft})
+\item Pritam Choudhury. 2022. Unifying Linearity and Dependency Analyses. Under Review. (\href{https://github.com/pritamChoudhury/UnderReviewPaper/blob/master/paper.pdf}{draft})
+\item Pritam Choudhury. 2022. Monadic and Comonadic Aspects of Dependency Analysis. Proc. ACM Program. Lang. 6, OOPSLA2, Article 172 (October 2022), 29 pages. (\href{https://doi.org/10.1145/3563335}{paper})(\href{https://arxiv.org/abs/2209.06334}{extended version})
+\item Pritam Choudhury, Harley D. Eades III, and Stephanie Weirich. 2022. A Dependent Dependency Calculus. In: Sergey, I. (eds) Programming Languages and Systems. ESOP 2022. Lecture Notes in Computer Science, vol 13240. Springer, Cham. (\href{https://doi.org/10.1007/978-3-030-99336-8_15}{paper}) (\href{https://www.youtube.com/watch?v=e_heE6IoN8Y}{talk})
+\item Pritam Choudhury, Harley D. Eades III, Richard A. Eisenberg, and Stephanie Weirich. 2021. A Graded Dependent Type System with a Usage-Aware Semantics. Proc. ACM Program. Lang. 5, POPL, Article 50 (January 2021), 32 pages. (\href{https://dl.acm.org/doi/10.1145/3434331}{paper}) (\href{https://www.youtube.com/watch?v=yrwtXrey7mE}{talk})
+\item Stephanie Weirich, Pritam Choudhury, Antoine Voizard, and Richard Eisenberg. 2019. A Role for Dependent Types in Haskell. Proc. ACM Program. Lang. 3, ICFP, Article 101 (August 2019), 29 pages. (\href{https://dl.acm.org/doi/abs/10.1145/3341705}{paper}) (\href{https://www.youtube.com/watch?v=0udX2HqFUD8}{talk})
+\item Pritam Choudhury. 2015. Constructive Representation of Nominal Sets in Agda. Master’s thesis. University of Cambridge, UK. (\href{https://www.cl.cam.ac.uk/~amp12/agda/choudhury/choudhury-dissertation.pdf}{Dissertation}) (\href{https://www.cl.cam.ac.uk/~amp12/agda/choudhury/html/README.html}{code})
+\end{enumerate}
+
+%--------------------------------------------------------------------------------
+%    Teaching Experience
+%--------------------------------------------------------------------------------
+
+\vspace{1em}
+
+\noindent\textbf{TEACHING EXPERIENCE}
+
+\vspace{1em}
+
+\Description{\MarginText{CIS 502 Fall 2017}I worked as a teaching assistant for the graduate Algorithms course in Fall 2017. I helped the instructor in setting and grading assignments. I also taught tutorial classes and helped students during my office hours.}
+
+\Description{\MarginText{CIS 262 Fall 2018}I worked as a teaching assistant for the undergraduate Theory of Computation course in Fall 2018. In this course too, I graded exams, held review sessions and helped students during my office hours.}
+
+\Description{\MarginText{CIS 502 Spring 2020}I worked as a teaching assistant for the graduate Algorithms course again in Spring 2020. The first half of the course was similar to its earlier versions; however, the second half was fully virtual due to the pandemic. Tutoring classes in the midst of a pandemic has been a challenging and learning experience for me.}  
+
+\vspace{1em}
+
+\textbf{EXTRACURRICULAR ACTIVITIES}\vspace{1em}
+
+\Description{\MarginText{CIS Graduate Association Chair}I was one of the chairs of the CIS Graduate Association at UPenn from Fall 2018 to Spring 2020. As a chair, I was quite vocal about some of the issues faced by the student community. For example, allowing classrooms to be used for office hours, ensuring better office spaces for PhD students, etc. I am happy that over the years, some of these issues have been resolved.}
+
+\Description{\MarginText{Penn TaeKwonDo}I have been a member of the \href{https://upenntkd.org/}{Penn TaeKwonDo Club} since summer 2021. I currently have a yellow belt and I am dedicated towards gaining mastery in this martial arts.}
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\textbf{OTHER INFORMATION}\vspace{1em}
+
+\Description{\MarginText{Awards}2014\ \ $\cdotp$\ \ MPhil Scholarship by the University of Cambridge Trust}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2014\ \ $\cdotp$\ \ Institute Silver Medal for Best Project, Electrical Engg., IIT Roorkee, India}
+\vspace{-0.5em}
+\Description{2008\ \ $\cdotp$\ \ Jagadis Bose National Science Talent Scholarship by Govt. of India}
+\vspace{-0.5em} 
+\Description{2007\ \ $\cdotp$\ \ National Talent Scholarship by Govt. of India}
+
+%-----------------------------------------------------------------------------------------
+
+\Description{\MarginText{Hobbies}\ Hiking\ $\cdotp$\ \ Martial Arts\ $\cdotp$\ \ Poetry }
+\vspace{0.5em}
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
